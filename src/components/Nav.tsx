@@ -10,22 +10,21 @@ function Nav() {
 
   return (
     <nav className="w-screen h-24 flex justify-between items-center">
-      <ul className="w-full flex justify-between items-center text-xl gap-4 py-4 px-10">
+      <ul className="w-screen flex justify-between items-center text-xl gap-4 py-4 px-10">
         {/* Left Link */}
         <li className="hidden sm:block">
-          <Link href="/">LINK UP</Link>
+          <Link href="/events">Events</Link>
         </li>
 
         {/* Center Logo */}
         <li className="absolute left-1/2 transform -translate-x-1/2 text-3xl border-2 px-8 py-4 rounded-xl">
-          <Link href="/" onClick={() => setOpen(false)}>Logo</Link>
+          <Link href="/" onClick={() => setOpen(false)}>
+            Logo
+          </Link>
         </li>
 
         {/* Right Links for Large Screens */}
         <div className="hidden sm:flex gap-4">
-          <li>
-            <Link href="/events">Events</Link>
-          </li>
           <li>
             <Link href="/findus">Find us</Link>
           </li>
@@ -52,7 +51,7 @@ function Nav() {
           >
             <MdOutlineClose size={30} />
           </button>
-          <ul className="flex flex-col text-4xl gap-6">
+          <ul className="flex flex-col text-6xl gap-14">
             <li>
               <Link href="/events" onClick={() => setOpen(false)}>
                 Events
