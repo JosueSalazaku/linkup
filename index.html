@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Up - Networking & Events</title>
+    <!-- CSS File -->
+    <link href="style.css" rel="stylesheet">
+    <!-- JavaScript File -->
+    <script src="script.js" defer></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Link Up</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#photos">Gallery</a></li>
+            <li><a href="#calendar">Events</a></li>
+            <li><a href="#merch">Merchandise</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#directions">Location</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <h1>Welcome to Link Up!
+                <h3>The place to connect with the right people.</h3>
+            </h1>
+            <p>Your go-to spot for networking, fun, and unforgettable events.</p>
+            <a href="#calendar" class="btn">Check Events</a>
+        </div>
+    </header>
+
+    <!-- Photo Gallery Section -->
+    <section id="photos">
+        <h2>Photo Gallery</h2>
+        <p>Take a look at our past events!</p>
+        <div class="gallery">
+            <!-- Images will be dynamically added via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Events Calendar Section -->
+    <section id="calendar">
+        <h2>Upcoming Events</h2>
+        <div id="event-calendar">
+            <!-- Calendar functionality will be handled by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section id="merch">
+        <h2>Merchandise</h2>
+        <p>Show your support by grabbing exclusive Link Up merchandise!</p>
+        <div class="products">
+            <!-- Product items will be dynamically loaded -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+<br>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+<br>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+           
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Directions Section -->
+    <section id="directions">
+        <h2>Find Us</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d9996.588940847743!2d4.400417621110882!3d51.21636329797412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x47c3f703a2514fe7%3A0x2747cd692cf51863!2sCentraal%20Station%2C%20Pelikaanstraat%2C%20Antwerpen!3m2!1d51.2143668!2d4.4206892!4m5!1s0x47c3f6f6e42e70ab%3A0xfbd92023bafcb872!2sOude%20Koornmarkt%2073%2C%20Antwerpen!3m2!1d51.218921699999996!2d4.400504499999999!5e0!3m2!1snl!2sbe!4v1732106976935!5m2!1snl!2sbe"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Link Up | All rights reserved.</p>
+    </footer>
+</body>
+</html>

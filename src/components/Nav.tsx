@@ -6,6 +6,17 @@ import { IoIosMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
 
 function Nav() {
+    /* TODO : ADD Gallery page, 
+    - add Merch in Shop page,
+    - add Change Find us with Contact and add Directions there 
+    - In Hero section add Link to Events / Possoble calendar
+    - In main Page: Hero Section Add here a calendar
+    -In Hero section : Picture gallery of events in radom slides -
+    - Add events Calendat section
+    - Add Merch Sections
+    - Contact sections with a Map from google
+    */
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -26,7 +37,7 @@ function Nav() {
         {/* Right Links for Large Screens */}
         <div className="hidden sm:flex gap-4">
           <li>
-            <Link href="/findus">Find us</Link>
+            <Link href="/contact">Contacts</Link>
           </li>
           <li>
             <Link href="/shop">Shop</Link>
