@@ -1,0 +1,215 @@
+/* Algemene styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f8f9fc;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif; /* Accent-lettertype */
+    color: #1d3557;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: #f77f00; /* Accentkleur */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #d65a00;
+    transform: scale(1.05);
+}
+
+/* Navigatiebalk */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(29, 53, 87, 0.9);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+nav.sticky {
+    background-color: #1d3557;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+nav .nav-links a {
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #a8dadc;
+}
+
+/* Hero Section */
+header {
+    text-align: center;
+    background: linear-gradient(
+        rgba(29, 53, 87, 0.8),
+        rgba(29, 53, 87, 0.8)
+    ),
+    url('https://images.unsplash.com/photo-1551806336-d611a0db2488?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&auto=format&fit=crop&w=1350') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+}
+
+header .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+header .hero-content p {
+    font-size: 1.3rem;
+    margin: 20px 0;
+}
+
+header .btn {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background-color: #fcbf49;
+    border-radius: 30px;
+    padding: 15px 30px;
+}
+
+header .btn:hover {
+    background-color: #e4a624;
+    transform: translateY(-5px);
+}
+
+/* Secties */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #1d3557;
+}
+
+/* Scroll Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Galerij */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Merchandise */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.products .product-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white;
+    transition: box-shadow 0.3s;
+    text-align: left;
+}
+
+.products .product-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.products .product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.products .product-item h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.products .product-item .price {
+    font-size: 1.2rem;
+    color: #457b9d;
+    margin: 5px 0;
+}
+
+.products .product-item button {
+    align-self: center;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #1d3557;
+    color: white;
+    font-size: 0.9rem;
+    border-top: 2px solid #f77f00;
+}
