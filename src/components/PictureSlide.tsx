@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface SlideshowProps {
   images: string[];
@@ -9,20 +9,20 @@ interface SlideshowProps {
 const Slideshow = ({ images }: SlideshowProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  // Automatically transition slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // 5 seconds per slide
 
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-  };
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [images.length]);
 
   return (
-    <div className="relative w-full max-w-3xl overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Slideshow */}
       <div
-        className="w-full h-[400px] flex transition-transform duration-500"
+        className="absolute top-0 left-0 w-full h-full flex transition-transform duration-1000"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((img, index) => (
@@ -30,38 +30,21 @@ const Slideshow = ({ images }: SlideshowProps) => {
             key={index}
             src={img}
             alt={`Slide ${index + 1}`}
-            width={1400}
-            height={800}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
         ))}
       </div>
 
-      {/* Navigation Buttons */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2"
-      >
-        ❮
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2"
-      >
-        ❯
-      </button>
-
-      {/* Indicator Dots */}
-      <div className="flex gap-2 absolute bottom-4 left-1/2 transform -translate-x-1/2">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`h-2 w-2 rounded-full cursor-pointer ${
-              currentIndex === index ? "bg-gray-800" : "bg-gray-400"
-            }`}
-          ></div>
-        ))}
+      {/* Overlay Content */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10 flex items-center justify-center text-white">
+        <div className="text-center">
+          <h1 className="text-3xl sm:text-4xl text-center mt-6">
+            Welcome to Link Up
+          </h1>
+          <h1 className="text-xl">The place to make the right connection</h1>
+        </div>
       </div>
     </div>
   );
