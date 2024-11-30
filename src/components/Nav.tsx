@@ -10,7 +10,7 @@ function Nav() {
 
   return (
     <nav className="absolute top-0 left-0 w-full bg-transparent h-24 z-10 flex justify-between items-center">
-      <ul className="w-full flex justify-between items-center text-xl gap-4 py-4 px-10">
+      <ul className="w-full flex justify-between text-white items-center text-xl gap-4 py-4 px-10">
         {/* Left Link */}
         <li className="hidden sm:block">
           <Link href="/events">Events</Link>
