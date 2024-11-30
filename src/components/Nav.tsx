@@ -6,22 +6,11 @@ import { IoIosMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
 
 function Nav() {
-    /* TODO : ADD Gallery page, 
-    - add Merch in Shop page,
-    - add Change Find us with Contact and add Directions there 
-    - In Hero section add Link to Events / Possoble calendar
-    - In main Page: Hero Section Add here a calendar
-    -In Hero section : Picture gallery of events in radom slides -
-    - Add events Calendat section
-    - Add Merch Sections
-    - Contact sections with a Map from google
-    */
-
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-screen h-24 flex justify-between items-center">
-      <ul className="w-screen flex justify-between items-center text-xl gap-4 py-4 px-10">
+    <nav className="absolute top-0 left-0 w-full bg-transparent h-24 z-10 flex justify-between items-center">
+      <ul className="w-full flex justify-between items-center text-xl gap-4 py-4 px-10">
         {/* Left Link */}
         <li className="hidden sm:block">
           <Link href="/events">Events</Link>
@@ -69,7 +58,7 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link href="/findus" onClick={() => setOpen(false)}>
+              <Link href="/contact" onClick={() => setOpen(false)}>
                 Find us
               </Link>
             </li>

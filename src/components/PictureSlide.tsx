@@ -19,7 +19,7 @@ const Slideshow = ({ images }: SlideshowProps) => {
   }, [images.length]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="absolute top-0 left-0 w-full h-screen -z-10 overflow-hidden">
       {/* Background Slideshow */}
       <div
         className="absolute top-0 left-0 w-full h-full flex transition-transform duration-1000"
@@ -35,16 +35,6 @@ const Slideshow = ({ images }: SlideshowProps) => {
             priority
           />
         ))}
-      </div>
-
-      {/* Overlay Content */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10 flex items-center justify-center text-white">
-        <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl text-center mt-6">
-            Welcome to Link Up
-          </h1>
-          <h1 className="text-xl">The place to make the right connection</h1>
-        </div>
       </div>
     </div>
   );
