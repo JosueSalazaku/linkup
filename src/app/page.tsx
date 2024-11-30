@@ -15,13 +15,18 @@ export default function Home() {
       {/* Content */}
       <section className="w-screen h-screen flex flex-col justify-center items-center">
         <h1 className="text-white text-4xl">Welcome to Link Up</h1>
+        <h1 className="text-white text-3xl">The place to make the right connections</h1>
       </section>
 
-      <section className="w-screen p-8 bg-gray-100">
-        <h1 className="text-xl font-bold">Upcoming Events</h1>
-        <div className="flex gap-5 items-center mt-4">
+      <section className="w-screen h-[30rem] bg-gray-100">
+        <h1 className="text-4xl font-bold p-6">Upcoming Events</h1>
+        <div className="flex items-center mt-4">
+          <div className="border h-[20rem] w-1/2">
           <Calendar />
+          </div>
+          <div className="border h-[20rem] w-1/2 items-center">
           <h1>Next Upcoming Event This Month: 13 December</h1>
+          </div>
         </div>
       </section>
 

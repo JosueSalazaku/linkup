@@ -33,7 +33,7 @@ const Slideshow = ({ images }: SlideshowProps) => {
   return (
     <div className="absolute top-0 left-0 w-full h-screen -z-10 overflow-hidden">
       {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black/80 z-10"></div>
 
       {/* Slideshow */}
       <div
@@ -56,7 +56,7 @@ const Slideshow = ({ images }: SlideshowProps) => {
               src={img}
               alt={`Slide ${index + 1}`}
               width={1400}
-              height={1000}
+              height={800}
               className="object-cover"
               priority={index === 0}
             />
