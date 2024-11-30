@@ -2,14 +2,14 @@
 import Slideshow from "@/components/PictureSlide";
 import { Calendar } from "@/components/ui/calendar";
 
-const images = ["/1.jpg", "/2.jpg", "/3.jpg"];
+// const images = ["/1.jpg", "/2.jpg", "/3.jpg"];
 
 export default function Home() {
   return (
     <main className="relative w-screen flex flex-col items-center">
       {/* Slideshow Positioned Directly Below the Nav */}
-      <div className="absolute top-0 left-0 w-full h-screen z-[-10]">
-        <Slideshow images={images} />
+      <div className="absolute top-0 left-0 bg- w-full h-screen z-[-10]">
+      <Slideshow images={["/1.jpg", "/2.jpg", "/3.jpg"]} />
       </div>
 
       {/* Content */}
