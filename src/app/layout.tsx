@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <div className="content-wrapper">
           <Nav />
-          <main className="main-content">{children}</main>
+          <main className="main-content bg-primaryDark">{children}</main>
           <Footer />
         </div>
       </body>
