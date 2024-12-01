@@ -16,10 +16,10 @@ export default {
         },
         extend: {
             colors: {
-                primaryDark: '#364866', // Dark blue
+                primaryDark: '#01112E', // Dark blue
                 secondaryDark: '#4c5c76', // Blue-gray
                 accentYellow: '#dda93d', // Golden yellow
-                accentOrange: '#ca641f', // Burnt orange
+                accentOrange: '#ea6a15', // Burnt orange
             },
             fontFamily: {
                 sans: ['Poppins']

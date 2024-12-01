@@ -16,9 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="content-wrapper">
+        <div className="content-wrapper bg-[#0F172A]">
           <Nav />
-          <main className="main-content bg-primaryDark">{children}</main>
+          <main className="main-content ">{children}</main>
           <Footer />
         </div>
       </body>

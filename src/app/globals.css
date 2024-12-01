@@ -12,15 +12,13 @@ body {
   }
 }
 
-/* Highlight event days */
 .react-calendar__tile.highlight {
-  background-color: #71c135; /* Light red background */
-  color: black; /* Text color */
-  border-radius: 5%; /* Optional: Make it circular */
+  background-color: #ea6a15; 
+  /* color: white;  */
+  border-radius: 5%; 
   font-weight: bold;
 }
 
-/* Add a hover effect */
 .react-calendar__tile.highlight:hover {
-  background-color: #ff9999; /* Slightly darker red */
+  background-color: #01112E; 
 }

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -41,7 +40,7 @@ export default function EventCalendar() {
         tileClassName={({ date }) => {
           const formattedDate = formatDate(date);
           const isEvent = events.some((event) => event.date === formattedDate);
-          return isEvent ? "highlight" : null; // Add a custom CSS class
+          return isEvent ? "highlight" : null; 
         }}
         locale="en-GB"
         className="rounded-md"

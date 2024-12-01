@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
-    <div className='w-screen h-14 bg-primaryDark border-t-2 border-accentOrange text-white flex flex-row justify-center items-center px-1O py-5'>
-        <p>&copy; 2024 Link Up | All rights reserved.</p>
-    </div>
-  )
+    <footer className="w-screen h-20 bg-[#0F172A] border-t-2 border-[#7C3AED] text-gray-200 flex justify-center items-center px-6">
+      <p className="text-sm md:text-base">
+        &copy; 2024 Link Up | All rights reserved.
+      </p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
