@@ -11,7 +11,7 @@ export default function Home() {
       {/* Welcome Section */}
       <section
         id="meeting-section"
-        className="w-screen h-screen flex flex-col justify-center items-center bg-[url('/Meeting.jpg')] bg-cover bg-center relative overflow-hidden"
+        className="w-screen h-screen flex flex-col justify-center items-center bg-[url('/meeting.jpg')] bg-cover bg-center relative overflow-hidden"
       >
         <div className="absolute top-0 left-0 w-full h-full bg-[#090E1A]/90" />
         <div className="flex flex-col items-center text-center relative z-10">
