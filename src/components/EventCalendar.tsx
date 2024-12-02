@@ -1,24 +1,27 @@
 "use client";
+
 import React, { useState } from "react";
 import Calendar from "react-calendar";
+import { useRouter } from "next/navigation"; // Import useRouter
 import "react-calendar/dist/Calendar.css";
 
 export const events = [
   {
     date: "2024-12-13",
-    url: "/event/dec-13",
-    text: "13 December"
+    url: "/events/2024-12-13",
+    text: "13 December",
   },
 ];
 
 export default function EventCalendar() {
   const [value, setValue] = useState<Date>(new Date());
+  const router = useRouter(); // Make sure useRouter is used within a client component
 
   const handleDateClick = (date: Date) => {
     const formattedDate = formatDate(date);
     const event = events.find((event) => event.date === formattedDate);
     if (event) {
-      window.location.href = event.url;
+      router.push(event.url); // Use router.push instead of window.location.href
     } else {
       alert("No events on this date!");
     }
@@ -32,7 +35,7 @@ export default function EventCalendar() {
   };
 
   return (
-    <div>
+    <div className="bg-[#1E293B] rounded-lg shadow-md p-6">
       <Calendar
         onChange={(value) => setValue(value as Date)}
         value={value}
@@ -40,10 +43,10 @@ export default function EventCalendar() {
         tileClassName={({ date }) => {
           const formattedDate = formatDate(date);
           const isEvent = events.some((event) => event.date === formattedDate);
-          return isEvent ? "highlight" : null; 
+          return isEvent ? "highlight" : null;
         }}
         locale="en-GB"
-        className="rounded-md"
+        className="react-calendar-custom"
       />
     </div>
   );
